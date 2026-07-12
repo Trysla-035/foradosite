@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(65, 56, 6) 0%, #41005a 25%);
+    color: white;
+}   
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 3px solid #281e2e;
+}
+
+.div-perfil {
+    display: flex;
+    margin-top: 20px;
+}
+
+#image-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.informacao-perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.informacao-perfil h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.informacao-perfil p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.informacao-perfil div {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.editar-perfil, .play {
+    padding: 5px 10px;
+    border: none;
+    background-color: #290736;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play {
+    background-color: #70009c;
+}
+
+.header nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.header nav button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #290736;
+    color: white;
+    border: 2px solid #70009c;
+}
+
+.header nav .selected {
+    background-color: white;
+    color: black;
+}
+
+.conteudo {
+    padding: 20px;
+}
+
+.conteudo-destaques h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.conteudo-destaques p {
+    margin-bottom: 12px;
+    color: #a5a5a5;
+}
+
+.conteudo-destaques button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #8f057c;
+    color: #ff04de;
+}
+
+.conteudo h2 {
+    margin-top: 40px;
+}
+
+.conteudo-maistocadas {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.musica {
+    width: 140px;
+    height: auto;
+    border: 2px solid #290736;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.4)
+}
+
+.musica img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.musica p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
