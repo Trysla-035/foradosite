@@ -1,11 +1,22 @@
-console.log("Projeto FORADOSITE iniciado!");
+console.log("Projeto FORA DO SITE iniciado!");
 
-const botaoConhecer = document.getElementById("botaoConhecer");
-const links = document.getElementById("links");
-const botaoConheçaoProjetoFORADOSITE = document.getElementById("botaoConheçaoProjetoFORADOSITE");
-const ConheçaoProjetoFORADOSITE = document.getElementById("ConheçaoProjetoFORADOSITE");
+// INTRO
 const intro = document.getElementById("intro");
+const conteudo = document.getElementById("conteudo");
+const entrar = document.getElementById("entrar");
 
-ConheçaoProjetoFORADOSITE.addEventListener("click", () => {
+entrar.addEventListener("click", () => {
     intro.style.display = "none";
+    conteudo.style.display = "block";
 });
+
+// BOTÃO LOGIN
+const login = document.getElementById("login");
+
+if (login) {
+    login.addEventListener("click", () => {
+
+        window.location.href = "artista/index.html";
+
+    });
+}
