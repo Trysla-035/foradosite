@@ -16,7 +16,7 @@ const login = document.getElementById("login");
 if (login) {
     login.addEventListener("click", () => {
 
-        window.location.href = "artista/index.html";
+        window.location.href = "artista/index.html?nome=gabriel";
 
     });
 }
