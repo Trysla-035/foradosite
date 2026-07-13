@@ -1,144 +1,166 @@
-/* Importa uma fonte estilo pichação */
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Special+Elite&display=swap');
+/* Fonte personalizada */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@font-face {
+    font-family: "MinhaFonte";
+    src: url("./fonts/227qt-sb5n3.woff2") format("woff2");
 }
 
-body{
-    background:#000;
-    color:#fff;
-    font-family:'Special Elite', monospace;
-    line-height:1.7;
-    padding:30px;
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Títulos */
+/* Corpo */
 
-h1,h2,h3{
-    font-family:'Rubik Glitch', cursive;
-    color:#00ff66;
-    font-weight:bold;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    position:relative;
-    display:inline-block;
-    transition:.4s;
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Special Elite', monospace;
+    line-height: 1.7;
+    padding: 30px;
+}
+
+/* Título principal */
+
+#intro h1 {
+    font-family: "TesteTrysla", sans-serif;
+    color: #00ff66;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    transition: .4s;
+}
+
+/* Demais títulos */
+
+h2,
+h3 {
+    font-family: 'Rubik Glitch', cursive;
+    color: #00ff66;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    transition: .4s;
 }
 
 /* Efeito de tinta */
 
-h1::after,
+#intro h1::after,
 h2::after,
-h3::after{
-    content:"";
-    position:absolute;
-    left:0;
-    top:100%;
-    width:100%;
-    height:0;
-    background:linear-gradient(
+h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(
         to bottom,
         rgba(0,255,100,.9),
         rgba(0,255,100,.4),
         transparent
     );
-    transition:.45s;
+    transition: .45s;
 }
 
-h1:hover,
+#intro h1:hover,
 h2:hover,
-h3:hover{
-    color:#66ff99;
+h3:hover {
+    color: #66ff99;
     text-shadow:
         0 0 5px #00ff66,
         0 0 15px #00ff66,
         0 0 25px #00ff66;
 }
 
-h1:hover::after,
+#intro h1:hover::after,
 h2:hover::after,
-h3:hover::after{
-    height:45px;
-    filter:blur(2px);
+h3:hover::after {
+    height: 45px;
+    filter: blur(2px);
 }
 
 /* Parágrafos */
 
-p{
-    color:white;
-    font-size:18px;
+p {
+    color: white;
+    font-size: 18px;
 }
 
 /* Links */
 
-a{
-    color:#00ff66;
-    text-decoration:none;
-    transition:.3s;
+a {
+    color: #00ff66;
+    text-decoration: none;
+    transition: .3s;
 }
 
-a:hover{
-    color:white;
-    text-shadow:0 0 10px #00ff66;
+a:hover {
+    color: white;
+    text-shadow: 0 0 10px #00ff66;
 }
 
 /* Botões */
 
-button{
-    background:#00ff66;
-    color:#000;
-    border:none;
-    padding:15px 35px;
-    font-weight:bold;
-    font-size:17px;
-    cursor:pointer;
-    transition:.3s;
+button {
+    background: #00ff66;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
 }
 
-button:hover{
-    background:white;
-    transform:scale(1.05);
-    box-shadow:0 0 20px #00ff66;
+button:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ff66;
 }
 
 /* Copyright */
 
-.copyright{
-    margin-top:40px;
-    font-size:14px;
-    opacity:.6;
-    text-align:center;
+.copyright {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: .6;
+    text-align: center;
 }
 
 /* Responsivo */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    body{
-        padding:15px;
+    body {
+        padding: 15px;
     }
 
-    h1{
-        font-size:42px;
+    #intro h1 {
+        font-size: 42px;
     }
 
-    h2{
-        font-size:28px;
+    h2 {
+        font-size: 28px;
     }
 
-    p{
-        font-size:17px;
-        text-align:justify;
+    p {
+        font-size: 17px;
+        text-align: justify;
     }
 
-    button{
-        width:100%;
-        max-width:320px;
-        margin:20px auto;
-        display:block;
+    button {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px auto;
+        display: block;
     }
 
 }
