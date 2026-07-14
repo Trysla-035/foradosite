@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <h1 id="titulo">Login</h1>
+        <form id="form">
+            <input name="nome" type="text" id="nome" placeholder="Nome" class="hidden">
+            <input name="email" type="email" id="email" placeholder="Email" required>
+            <input name="senha" type="password" id="senha" placeholder="Senha" required>
+            <input type="password" id="confirmar" placeholder="Confirmar senha" class="hidden">
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p id="error"></p>
+
+        <p id="trocar">
+            Não tem conta?
+            <span>Cadastrar</span>
+        </p>
+    </div>
+</body>
+<script src="desing.js"></script>
+<script src="api.js"></script>
+</html>

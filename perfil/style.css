@@ -1,0 +1,100 @@
+@import '../css/variaveis.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text2-color);
+}
+
+.main {
+    padding: 12px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.perfil {
+    background-color: var(--background2-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.information-perfil {
+    height: 150px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.information-perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.text-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    
+}
+
+.text-perfil h1 {
+    font-weight: 900;
+}
+
+#email {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#titulo {
+    font-weight: 400;
+}
+
+button {
+    height: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: var(--button-color);
+    border: none;
+    color: var(--text-color);
+}
+
+.redes-sociais {
+    background-color: var(--background2-color);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.redes-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+}
+
+.rede{
+    display: flex;
+    align-items: center;
+    border: 2px solid #3d3d3d;
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.rede img {
+    margin-right: 12px;
+}
