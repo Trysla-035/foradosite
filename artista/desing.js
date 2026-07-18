@@ -25,6 +25,10 @@ function get_social_tag(tipo, link) {
     return rede_social_tag
 }
 
+function encaminhar(link) {
+    if (!link) return
+    window.location.href = link
+}
 
 function selected(button) {
     // Remove the 'selected' class from all buttons

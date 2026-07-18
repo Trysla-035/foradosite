@@ -1,8 +1,9 @@
 
 const url_login = "../artista/index.html"
 
-if (document.cookie)
+if (document.cookie && document.cookie.includes("user_id=")) {
     window.location.href = "../artista/index.html"
+}
 
 const api_url = "https://api-trysla.vercel.app/api/usuario"
 // const api_url = "http://localhost:3000/api/usuario"
@@ -66,13 +67,19 @@ function criarUser(nome, senha, email) {
     )
         .then(async r => {
             const response = await r.json()
-            if (response.ok) {
-                document.cookie = "user_id=" + r.body.id  + "; path=/";
-                window.location.href = "../artista/index.html"
-            } else
-                p_error.textContent = response.error
-        }
-        )
+            if (r.ok) {
+                const userId = response.data?.user?.id ?? response.data?.id ?? response.id
+                if (userId) {
+                    document.cookie = "user_id=" + userId + "; path=/";
+                    window.location.href = "../artista/index.html"
+                    return
+                }
+            }
+            p_error.textContent = response.error || "Erro ao cadastrar usuário"
+        })
+        .catch(() => {
+            p_error.textContent = "Erro de rede. Tente novamente."
+        })
 }
 
 function loginUser(email, senha) {
@@ -90,8 +97,15 @@ function loginUser(email, senha) {
     )
         .then(async r => {
             const response = await r.json()
-            document.cookie = "user_id=" + response.data.user.id + "; path=/"
-            window.location.href = "../artista/index.html"
+            if (r.ok && response.data?.user?.id) {
+                document.cookie = "user_id=" + response.data.user.id + "; path=/"
+                window.location.href = "../artista/index.html"
+            } else {
+                p_error.textContent = response.error || "Email ou senha incorretos"
+            }
+        })
+        .catch(() => {
+            p_error.textContent = "Erro de rede. Tente novamente."
         })
 
 }

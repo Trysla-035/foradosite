@@ -1,22 +1,22 @@
-console.log("Projeto FORA DO SITE iniciado!");
+document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("intro");
+    const conteudo = document.getElementById("conteudo");
+    const entrar = document.getElementById("entrar");
+    const login = document.getElementById("login");
 
-// INTRO
-const intro = document.getElementById("intro");
-const conteudo = document.getElementById("conteudo");
-const entrar = document.getElementById("entrar");
+    const openLoginPage = () => {
+        const loginUrl = new URL("../login/index.html", window.location.href).href;
+        window.location.href = loginUrl;
+    };
 
-entrar.addEventListener("click", () => {
-    intro.style.display = "none";
-    conteudo.style.display = "block";
+    if (entrar && intro && conteudo) {
+        entrar.addEventListener("click", () => {
+            intro.style.display = "none";
+            conteudo.style.display = "block";
+        });
+    }
+
+    if (login) {
+        login.addEventListener("click", openLoginPage);
+    }
 });
-
-// BOTÃO LOGIN
-const login = document.getElementById("login");
-
-if (login) {
-    login.addEventListener("click", () => {
-
-        window.location.href = "artista/index.html?nome=gabriel";
-
-    });
-}

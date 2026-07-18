@@ -1,11 +1,9 @@
-/* Fonte personalizada */
-
 @font-face {
-    font-family: "MinhaFonte";
-    src: url("./fonts/227qt-sb5n3.woff2") format("woff2");
+    font-family: "Trysla";
+    src: url("../fonts/Trysla.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
-
-/* Reset */
 
 * {
     margin: 0;
@@ -18,15 +16,16 @@
 body {
     background: #000;
     color: #fff;
-    font-family: 'Special Elite', monospace;
+
+    font-family: Arial, sans-serif;
     line-height: 1.7;
     padding: 30px;
 }
 
-/* Título principal */
+/* Título principal - FORA DO SITE */
 
 #intro h1 {
-    font-family: "TesteTrysla", sans-serif;
+    font-family: Arial, sans-serif;
     color: #00ff66;
     font-weight: normal;
     text-transform: uppercase;
@@ -36,13 +35,13 @@ body {
     transition: .4s;
 }
 
-/* Demais títulos */
+/* Demais títulos - Sobre, Projetos, etc */
 
 h2,
 h3 {
-    font-family: 'Rubik Glitch', cursive;
+    font-family: Arial, sans-serif;
     color: #00ff66;
-    font-weight: bold;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 3px;
     position: relative;
@@ -69,6 +68,8 @@ h3::after {
     );
     transition: .45s;
 }
+
+/* Hover títulos */
 
 #intro h1:hover,
 h2:hover,

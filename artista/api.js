@@ -4,9 +4,9 @@ const api_url = "https://api-trysla.vercel.app/api"
 const redirect_No_user = "../index.html"
 
 const params = new URLSearchParams(window.location.search)
-if (params) {
-    const nome = params.get('nome')
+const nome = params.get('nome')
 
+if (nome) {
     // mudar nome
     fetch(`${api_url}/usuario/${nome}`)
         .then(async (response) => {
@@ -15,9 +15,13 @@ if (params) {
                 let dado = await response.json()
                 dado = dado[0]
                 const p_nome = document.querySelector('.nome')
-                p_nome.textContent = `${dado.nome} | ${dado.email}`
+                if (p_nome) {
+                    p_nome.textContent = `${dado.nome} | ${dado.email}`
+                }
                 const p_titulo = document.querySelector('#titulo')
-                p_titulo.textContent = `${dado.titulo}`
+                if (p_titulo) {
+                    p_titulo.textContent = `${dado.titulo}`
+                }
             } else {
                 window.location.href = redirect_No_user
             }
@@ -31,11 +35,14 @@ if (params) {
                 dado = dado[0]
                 const div_redes_sociais = document.querySelector('.redes-sociais')
                 console.log(dado)
-                for ([tipo, link] of Object.entries(dado).slice(3)) {
-                    div_redes_sociais.innerHTML += (get_social_tag(tipo, link))
+                for (const [tipo, link] of Object.entries(dado).slice(3)) {
+                    div_redes_sociais.innerHTML += get_social_tag(tipo, link)
                 }
             }
         })
+        .catch(() => {
+            window.location.href = redirect_No_user
+        })
 } else {
-    window.location.href(redirect_No_user)
+    window.location.href = redirect_No_user
 }
